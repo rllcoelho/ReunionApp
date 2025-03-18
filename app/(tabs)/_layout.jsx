@@ -1,17 +1,19 @@
 import { Tabs,  } from 'expo-router'
-import Ionicons from '@expo/vector-icons/Ionicons'
+import Entypo from '@expo/vector-icons/Entypo'
 import { Image } from 'react-native';
+import ReunionIcon from '@/components/svg_icons/reunion_icon';
 
 export default function TabLayout() {
     return (
         <Tabs
             screenOptions={{
-                tabBarActiveTintColor: '#ffd33d',
+                tabBarActiveTintColor: '#a855f7',
                 headerStyle: {
                 backgroundColor: '#fff',
                 },
                 headerShadowVisible: false,
                 headerTintColor: '#fff',
+                tabBarShowLabel: false,
                 tabBarStyle: {
                 backgroundColor: '#fff',
                 }
@@ -26,10 +28,15 @@ export default function TabLayout() {
                     />
                 ),
                 tabBarIcon: ({ color, focused }) => (
-                    <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
+                    <ReunionIcon color={color} />
                 )
             }} />
-            <Tabs.Screen name="about" options={{ title: 'Sobre' }} />
+            <Tabs.Screen name="about" options={{ 
+                title: 'Sobre',
+                tabBarIcon: ({ color, focused }) => (
+                    <Entypo name="user" size={24} color={color} />
+                )
+            }} />
         </Tabs>
     )
 }
