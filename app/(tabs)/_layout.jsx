@@ -9,13 +9,17 @@ export default function TabLayout() {
             screenOptions={{
                 tabBarActiveTintColor: '#a855f7',
                 headerStyle: {
-                backgroundColor: '#fff',
+                    backgroundColor: '#fff',
                 },
                 headerShadowVisible: false,
-                headerTintColor: '#fff',
+                headerTintColor: '#000',
+                headerTitleStyle: {
+                    fontSize: 28, // Increased font size
+                },
                 tabBarShowLabel: false,
                 tabBarStyle: {
-                backgroundColor: '#fff',
+                    backgroundColor: '#fff',
+                    height: 60,
                 }
             }}
         >
@@ -31,8 +35,8 @@ export default function TabLayout() {
                     <ReunionIcon color={color} />
                 )
             }} />
-            <Tabs.Screen name="about" options={{ 
-                title: 'Sobre',
+            <Tabs.Screen name="profile" options={{ 
+                title: 'Perfil',
                 tabBarIcon: ({ color, focused }) => (
                     <Entypo name="user" size={24} color={color} />
                 )
