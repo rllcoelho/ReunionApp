@@ -1,7 +1,7 @@
 import { View, TextInput } from "react-native";
 import "../../global.css"
 import { Link } from "expo-router"
-import ClimberCard from '@/components/climber_card'
+import ClimberCard from '@/mobile/components/climber_card'
 
 export default function Index() {
   const users = {
